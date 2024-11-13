@@ -3,7 +3,10 @@ function Movie({ movies }) {
     <>
       {movies.map((movie) => (
         <div key={movie.id} className="movie-card">
-          <img src={movie.poster_path} alt={movie.title} />
+          <img
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            alt={movie.title}
+          />
         </div>
       ))}
     </>
