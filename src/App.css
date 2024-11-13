@@ -12,4 +12,44 @@ body {
 }
 img {
   width: 100%;
+  background-color: white;
+}
+.titulo {
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 30%;
+  left: 35%;
+}
+.h6 {
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 40%;
+  left: 37.5%;
+}
+.HACKFLIX {
+  position: absolute;
+  color: white;
+  text-align: start;
+  top: 10%;
+  left: 10%;
+}
+.home {
+  position: absolute;
+  color: white;
+  text-align: end;
+  top: 10%;
+  right: 10%;
+}
+.banner {
+  width: 100%;
+  bottom: 90%;
+  clip-path: inset(
+    0 0 45% 0
+  ); /* esto me sirve para recortar de manera recta (aprendido)  1:0(arriba) 2:0(der) 3: 20% (abajo) 4:0(izq)*/
+}
+.conteinerbanner {
+  position: relative;
+  text-align: center;
 }
