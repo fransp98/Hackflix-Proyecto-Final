@@ -2,6 +2,7 @@ import TpoBanner from "./components/TopBanner";
 import { useState, useEffect } from "react";
 import "./App.css";
 import MovieSection from "./components/MoviesSection";
+import StarsFilter from "./components/StarsFilter";
 /* import movies from "./data/movies.json"; */
 
 function App() {
@@ -17,12 +18,16 @@ function App() {
     }
     getMovies();
   }, []);
+  const handleFilter = (minRating) => {
+    const results = movies.filter((movie) => movie.vote_average >= minRating);
+    setMovies(results);
+  };
 
   return (
     <>
       <TpoBanner> </TpoBanner>
 
-      <MovieSection movies={movies} />
+      <MovieSection movies={movies} handleFilter={handleFilter} />
     </>
   );
 }
