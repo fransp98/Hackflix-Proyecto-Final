@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 
-function StarFilters({ onFilter }) {
-  const [rating, setRating] = useState(0);
-
+function StarFilters({ setRating }) {
   const handleRatingChange = (newRating) => {
-    setRating(newRating);
-    onFilter(newRating * 2);
+    setRating(newRating * 2 - 2);
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center star-filter">
+    <div className="d-flex justify-content-center align-items-center star-filter mb-3">
       <h3 className="filtro">Filtrar por rating</h3>
 
       <ReactStars
