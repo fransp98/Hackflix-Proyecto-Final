@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 
 function StarFilters({ setRating }) {
+  // funcion que da valor a la variable rating y que sea del 0 al 10 en vez de 0 al 5
   const handleRatingChange = (newRating) => {
-    setRating(newRating * 2 - 2);
+    setRating(newRating * 2);
   };
 
   return (
@@ -13,8 +14,16 @@ function StarFilters({ setRating }) {
       <ReactStars
         count={5}
         onChange={handleRatingChange}
-        size={24}
+        size={50}
         activeColor="#ff4f14"
+        value={5}
+        /* 
+        count = cantidad de estrellas
+        onChange = ejecuta la funcion handleRatingChange cada vez que se modifica el componente
+        size = tamaño de las estrellas
+        activeColor = color de las estrellas activadas
+        value = valor inicial del filtro
+        */
       />
     </div>
   );
