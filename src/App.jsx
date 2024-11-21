@@ -20,7 +20,7 @@ function App() {
     setPage(page + 1);
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/discover/movie?api_key=a990bf3702ca2532fca8742542f6e792&include_adult=false&page=${page}&sort_by=popularity.desc&vote_count.gte=100&vote_average.lte=${rating}`
+        `https://api.themoviedb.org/3/discover/movie?api_key=a990bf3702ca2532fca8742542f6e792&include_adult=false&page=${page}&sort_by=popularity.desc&vote_count.gte=100&vote_average.lte=${rating}&vote_count.gte=40`
       );
       const moviesList = await response.json();
       setMovies((prevMovies) => [...prevMovies, ...moviesList.results]);

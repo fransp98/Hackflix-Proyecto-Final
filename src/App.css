@@ -54,6 +54,11 @@ body {
 .conteinerbanner {
   position: relative;
   text-align: center;
+  height: 500px;
+  background: linear-gradient(to top, rgba(18, 18, 18, 1), rgba(0, 0, 0, 0)),
+    url("https://a-us.storyblok.com/f/1002378/1920x823/8e1fc26772/best-websites-for-filmmakers-blog-banner.jpeg");
+  background-position: top center;
+  background-size: cover;
 }
 
 .star-filter {
