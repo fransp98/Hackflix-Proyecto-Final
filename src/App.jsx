@@ -1,13 +1,26 @@
-import TopBanner from "./components/TopBanner";
 import { useState, useEffect } from "react";
 import "./App.css";
-import MovieSection from "./components/MoviesSection";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./page/Home";
+import Peliculas from "./page/Peliculas";
 
 function App() {
   // Variables useState
   const [movies, setMovies] = useState([]);
   const [rating, setRating] = useState(10);
   const [page, setPage] = useState(1);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <Home movies={movies} setRating={setRating} getMovies={getMovies} />
+      ),
+    },
+    {
+      path: "/peliculas/:id",
+      element: <Peliculas />,
+    },
+  ]);
 
   // useEffect que hace un nuevo fetch cada vez que se modifica el filtro de estrellas
   useEffect(() => {
@@ -32,13 +45,7 @@ function App() {
 
   return (
     <>
-      <TopBanner> </TopBanner>
-
-      <MovieSection
-        movies={movies}
-        setRating={setRating}
-        getMovies={getMovies}
-      />
+      <RouterProvider router={router} />
     </>
   );
 }

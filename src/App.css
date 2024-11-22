@@ -15,20 +15,17 @@ body {
   width: 100%;
   border-radius: 5px;
 }
-
+.movies-section {
+  padding-top: 7rem;
+  min-height: 1000px;
+}
 .titulo {
-  position: absolute;
   color: white;
   text-align: center;
-  top: 30%;
-  left: 35%;
 }
 .h6 {
-  position: absolute;
   color: white;
   text-align: center;
-  top: 40%;
-  left: 37.5%;
 }
 .HACKFLIX {
   position: absolute;
@@ -52,13 +49,14 @@ body {
   ); /* esto me sirve para recortar de manera recta (aprendido)  1:0(arriba) 2:0(der) 3: 20% (abajo) 4:0(izq)*/
 }
 .conteinerbanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   text-align: center;
   height: 85vh;
-  background: linear-gradient(to top, rgba(18, 18, 18, 1), rgba(0, 0, 0, 0)),
-    url("https://a-us.storyblok.com/f/1002378/1920x823/8e1fc26772/best-websites-for-filmmakers-blog-banner.jpeg");
-  background-position: top center;
-  background-size: cover;
+  background-size: cover !important;
+  background-position: center !important;
 }
 
 .star-filter {

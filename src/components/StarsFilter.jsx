@@ -8,7 +8,7 @@ function StarFilters({ setRating }) {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center star-filter mb-3">
+    <div className="d-flex justify-content-center align-items-center star-filter">
       <h3 className="filtro">Filtrar por rating</h3>
 
       <ReactStars

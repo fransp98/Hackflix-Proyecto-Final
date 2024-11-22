@@ -1,4 +1,5 @@
 import InfiniteScroll from "react-infinite-scroll-component";
+import { Link } from "react-router-dom";
 
 function Movie({ movies, getMovies }) {
   return (
@@ -15,12 +16,14 @@ function Movie({ movies, getMovies }) {
       >
         <div className="movies-section container justify-content-center d-flex flex-wrap gap-3">
           {movies.map((movie) => (
-            <div key={movie.id} className="movie-card">
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title}
-              />
-            </div>
+            <Link to={`/Peliculas/${movie.id}`}>
+              <div key={movie.id} className="movie-card">
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt={movie.title}
+                />
+              </div>
+            </Link>
           ))}
         </div>
       </InfiniteScroll>
