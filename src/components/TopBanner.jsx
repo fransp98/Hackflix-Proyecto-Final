@@ -13,10 +13,17 @@ const TopBanner = ({ img, title, text }) => {
         <h1 className="titulo">{title}</h1>
         <h6 className="h6">{text}</h6>
       </div>
+      <div className="navbar">
+        <Link className="linkstyle" to="/">
+          <h3 className="home">Inicio</h3>
+        </Link>
+        <Link className="linkstyle" to="/buscador">
+          <h3 className="home">Buscar</h3>
+        </Link>
+      </div>
       <Link to="/">
-        <h3 className="home"> Home</h3>
+        <h3 className="HACKFLIX">HACKFLIX</h3>
       </Link>
-      <h3 className="HACKFLIX">HACKFLIX</h3>
     </div>
   );
 };

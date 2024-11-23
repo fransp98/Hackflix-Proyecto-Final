@@ -10,7 +10,7 @@ function Buscador() {
         title={"¡TUS PELICULAS FAVORITAS!"}
         text={"Siempre somos los preferidos para los verdaderos fanaticos"}
       />
-      <BuscadorInput></BuscadorInput>
+      <BuscadorInput />
     </>
   );
 }

@@ -35,11 +35,7 @@ body {
   left: 10%;
 }
 .home {
-  position: absolute;
   color: white;
-  text-align: end;
-  top: 10%;
-  right: 10%;
 }
 .banner {
   width: 100%;
@@ -96,4 +92,14 @@ body {
 
 .buscador {
   min-height: 500px;
+}
+.navbar {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  display: flex;
+  gap: 2rem;
+}
+.linkstyle {
+  text-decoration: none;
 }
