@@ -103,3 +103,46 @@ body {
 .linkstyle {
   text-decoration: none;
 }
+
+.Plot,
+.Review {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.Title,
+.Plot,
+.Review,
+.Year {
+  color: #ffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.Primary {
+  color: #ff4f14;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #ff4f14, 0 0 20px #ff4f14;
+}
+
+.Year {
+  color: #ff4f14;
+  font-size: 1.4rem;
+  text-shadow: 0 0 10px #ff4f14, 0 0 20px #ff4f14;
+}
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  border-top: 2px solid #ff6b6b;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 10px 0;
+}
+
+.footer strong {
+  color: #ff6b6b;
+}

@@ -1,4 +1,5 @@
 import halloweenMovies from "../data/halloweenMovies.json";
+import Footer from "./Footer";
 
 function MovieJson() {
   const movies = halloweenMovies;
@@ -10,12 +11,14 @@ function MovieJson() {
             <img className="poster-img" src={movie.image} alt={movie.title} />
           </div>
           <div className="col-8">
-            <h2> {movie.title} </h2>
-            <p> {movie.plot} </p>
-            <p> {movie.review} </p>
+            <h2 className="Title Primary"> {movie.title} </h2>
+            <h3 className="Year">Released dates: {movie.year} </h3>
+            <span className="Plot"> Plot: {movie.plot} </span>
+            <span className="Review"> Review: {movie.review} </span>
           </div>
         </div>
       ))}
+      <Footer />
     </div>
   );
 }

@@ -27,7 +27,7 @@ function BuscadorInput() {
         <input
           type="text"
           class="form-control"
-          placeholder="escrube aqui tu peli :)"
+          placeholder="Escribe aqui tu peli :)"
           onChange={movieQueryInput}
         ></input>
         <button

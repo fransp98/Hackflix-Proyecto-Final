@@ -1,3 +1,5 @@
+import Footer from "./Footer";
+
 function MovieDetails({ movie }) {
   return (
     <>
@@ -25,6 +27,7 @@ function MovieDetails({ movie }) {
             <p>Remuneracion: U$D {movie.revenue}</p>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );
