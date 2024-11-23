@@ -16,8 +16,8 @@ function Movie({ movies, getMovies }) {
       >
         <div className="movies-section container justify-content-center d-flex flex-wrap gap-3">
           {movies.map((movie) => (
-            <Link to={`/Peliculas/${movie.id}`}>
-              <div key={movie.id} className="movie-card">
+            <Link key={movie.id} to={`/Peliculas/${movie.id}`}>
+              <div className="movie-card">
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt={movie.title}

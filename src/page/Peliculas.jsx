@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import TopBanner from "../components/TopBanner";
+import MovieDetails from "../components/MovieDetails";
+import Loader from "../components/Loader";
 
 function Peliculas() {
   const movieId = useParams();
@@ -21,14 +23,17 @@ function Peliculas() {
     getMovie();
   }, []);
 
-  return (
+  return movie ? (
     <>
       <TopBanner
         img={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
         title={movie.original_title}
         text={movie.tagline}
       />
+      <MovieDetails movie={movie} />
     </>
+  ) : (
+    <Loader />
   );
 }
 
