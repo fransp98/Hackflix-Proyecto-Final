@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./page/Home";
 import Peliculas from "./page/Peliculas";
 import Error from "./page/Error";
+import Buscador from "./page/Buscador";
 
 function App() {
   // Variables useState
@@ -22,6 +23,10 @@ function App() {
     {
       path: "/peliculas/:id",
       element: <Peliculas />,
+    },
+    {
+      path: "/buscador",
+      element: <Buscador />,
     },
     {
       path: "*",
