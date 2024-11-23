@@ -5,6 +5,7 @@ import Home from "./page/Home";
 import Peliculas from "./page/Peliculas";
 import Error from "./page/Error";
 import Buscador from "./page/Buscador";
+import Halloween from "./page/Halloween";
 
 function App() {
   // Variables useState
@@ -27,6 +28,10 @@ function App() {
     {
       path: "/buscador",
       element: <Buscador />,
+    },
+    {
+      path: "/recomendaciones+halloween",
+      element: <Halloween />,
     },
     {
       path: "*",
