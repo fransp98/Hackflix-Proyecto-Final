@@ -64,6 +64,7 @@ body {
 .poster-img {
   width: 100%;
 }
+
 .details {
   color: white;
   font-size: 1.2rem;
@@ -144,5 +145,17 @@ body {
 }
 
 .footer strong {
+  color: #ff6b6b;
+}
+
+.button {
+  background-color: #ff4f14;
+  box-shadow: 0px 0px 15px #ff4f14;
+}
+.button:hover {
+  background-color: #ff6b6b;
+  box-shadow: 0px 0px 20px #ff6b6b;
+}
+.movie-division {
   color: #ff6b6b;
 }

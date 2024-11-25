@@ -5,9 +5,11 @@ import MovieDetails from "../components/MovieDetails";
 import Loader from "../components/Loader";
 
 function Peliculas() {
+  // useParams es un hook de react router dom que se guarda el id que hay en el buscador de google en la variable movieId
   const movieId = useParams();
   const [movie, setMovie] = useState("");
 
+  // este useEffect hace el llamado a la api cuando el componente Peliculas.jsx se renderiza por primera vez
   useEffect(() => {
     async function getMovie() {
       try {
@@ -23,6 +25,7 @@ function Peliculas() {
     getMovie();
   }, []);
 
+  // este condicional muestra el Loader hasta que movie deje de ser un objeto vacio.
   return movie ? (
     <>
       <TopBanner

@@ -13,7 +13,7 @@ function MovieDetails({ movie }) {
             />
           </div>
           <div className="col-8 p-3 details">
-            <div className="lista">
+            <div className="lista d-flex">
               Generos:{" "}
               <ul>
                 {movie.genres.map((generos) => {
@@ -23,8 +23,10 @@ function MovieDetails({ movie }) {
             </div>
             <p>Sinopsis: {movie.overview}</p>
             <p>Lanzada el: {movie.release_date}</p>
-            <p>Presupuesto: U$D {movie.budget}</p>
-            <p>Remuneracion: U$D {movie.revenue}</p>
+
+            {/* toLocaleString le pone comas al precio para mejorar la legibilidad */}
+            <p>Presupuesto: U$D {movie.budget.toLocaleString()}</p>
+            <p>Remuneracion: U$D {movie.revenue.toLocaleString()}</p>
           </div>
         </div>
         <Footer />

@@ -5,10 +5,12 @@ function BuscadorInput() {
   const [movieQuery, setMovieQuery] = useState("");
   const [moviesArray, setMoviesArray] = useState([]);
 
+  // cada vez que se modifica el contenido del input se guarda el texto en movieQuery
   const movieQueryInput = (event) => {
     setMovieQuery(event.target.value);
   };
 
+  // llamado a la api que guarda el array de posibles resultados de la busqueda
   async function getMovieByQuery() {
     try {
       const response = await fetch(

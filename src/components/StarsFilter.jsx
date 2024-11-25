@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactStars from "react-rating-stars-component";
 
 function StarFilters({ setRating }) {
-  // funcion que da valor a la variable rating y que sea del 0 al 10 en vez de 0 al 5
+  // funcion que da valor a la variable rating y que sea del 0 al 8 en vez de 1 al 5
   const handleRatingChange = (newRating) => {
-    setRating(newRating * 2);
+    setRating(newRating * 2 - 2);
   };
 
   return (

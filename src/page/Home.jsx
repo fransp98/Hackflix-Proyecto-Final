@@ -5,7 +5,7 @@ import { useEffect } from "react";
 function Home({ movies, setRating, getMovies }) {
   // Este useEffect resetea rating para que al volver a la pagina inicial se cargue el filtro entero
   useEffect(() => {
-    setRating(10);
+    setRating(8);
   }, []);
 
   return (

@@ -3,6 +3,7 @@ import "../App.css";
 import { Link } from "react-router-dom";
 
 const TopBanner = ({ img, title, text }) => {
+  // variable que se guarda la img que llega por props para cargarla como background img en linea
   const bannerStyle = {
     background: `linear-gradient(to top, rgba(18, 18, 18, 1), rgba(0, 0, 0, 0)), url(${img})`,
   };

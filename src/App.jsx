@@ -10,10 +10,10 @@ import Halloween from "./page/Halloween";
 function App() {
   // Variables useState
   const [movies, setMovies] = useState([]);
-  const [rating, setRating] = useState(10);
+  const [rating, setRating] = useState(8);
   const [page, setPage] = useState(1);
 
-  // Router rutas
+  // Router, se le asigan diferentes componentes a cada ruta
   const router = createBrowserRouter([
     {
       path: "/",
@@ -50,7 +50,7 @@ function App() {
     setPage(page + 1);
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/discover/movie?api_key=a990bf3702ca2532fca8742542f6e792&include_adult=false&page=${page}&sort_by=popularity.desc&vote_count.gte=100&vote_average.lte=${rating}&vote_count.gte=40`
+        `https://api.themoviedb.org/3/discover/movie?api_key=a990bf3702ca2532fca8742542f6e792&include_adult=false&page=${page}&sort_by=popularity.desc&vote_count.gte=40&vote_average.gte=${rating}`
       );
       const moviesList = await response.json();
       setMovies((prevMovies) => [...prevMovies, ...moviesList.results]);
@@ -58,7 +58,6 @@ function App() {
       console.log(error);
     }
   }
-  //sadasd
 
   return (
     <>
