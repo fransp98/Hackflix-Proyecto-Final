@@ -30,6 +30,7 @@ function App() {
       element: <Buscador />,
     },
     {
+      // Sería mejor que la ruta sea "recomendaciones-halloween" por convenciones de URLs
       path: "/recomendaciones+halloween",
       element: <Halloween />,
     },
@@ -49,6 +50,7 @@ function App() {
   async function getMovies() {
     setPage(page + 1);
     try {
+      // TIP: Investiguen sobre variables de entorno, para que no quede la API Key visible en el repositorio
       const response = await fetch(
         `https://api.themoviedb.org/3/discover/movie?api_key=a990bf3702ca2532fca8742542f6e792&include_adult=false&page=${page}&sort_by=popularity.desc&vote_count.gte=40&vote_average.gte=${rating}`
       );
