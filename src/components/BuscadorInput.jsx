@@ -25,15 +25,15 @@ function BuscadorInput() {
 
   return (
     <div className="container buscador">
-      <div class="input-group mb-3">
+      <div className="input-group mb-3">
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           placeholder="Escribe aqui tu peli :)"
           onChange={movieQueryInput}
         ></input>
         <button
-          class="btn btn-outline-secondary"
+          className="btn btn-outline-secondary"
           type="button"
           id="button-addon2"
           onClick={getMovieByQuery}

@@ -74,8 +74,8 @@ function MovieJson() {
       </div>
 
       {movies.map((movie) => (
-        <>
-          <div key={movie.id} className="row mt-3 mb-3">
+        <div key={movie.id}>
+          <div className="row mt-3 mb-3">
             <div className="col-4">
               <img className="poster-img" src={movie.image} alt={movie.title} />
             </div>
@@ -87,7 +87,7 @@ function MovieJson() {
             </div>
           </div>
           <hr className="movie-division" />
-        </>
+        </div>
       ))}
       <Footer />
     </div>
