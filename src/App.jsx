@@ -12,6 +12,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [rating, setRating] = useState(8);
   const [page, setPage] = useState(1);
+  const apiKey = import.meta.env.VITE_REACT_APP_APIKEY;
 
   // Router, se le asigan diferentes componentes a cada ruta
   const router = createBrowserRouter([
@@ -52,7 +53,7 @@ function App() {
     try {
       // TIP: Investiguen sobre variables de entorno, para que no quede la API Key visible en el repositorio
       const response = await fetch(
-        `https://api.themoviedb.org/3/discover/movie?api_key=a990bf3702ca2532fca8742542f6e792&include_adult=false&page=${page}&sort_by=popularity.desc&vote_count.gte=40&vote_average.gte=${rating}`
+        `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&include_adult=false&page=${page}&sort_by=popularity.desc&vote_count.gte=40&vote_average.gte=${rating}`
       );
       const moviesList = await response.json();
       setMovies((prevMovies) => [...prevMovies, ...moviesList.results]);

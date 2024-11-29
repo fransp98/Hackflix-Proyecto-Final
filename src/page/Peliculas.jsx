@@ -8,13 +8,14 @@ function Peliculas() {
   // useParams es un hook de react router dom que se guarda el id que hay en el buscador de google en la variable movieId
   const movieId = useParams();
   const [movie, setMovie] = useState("");
+  const apiKey = import.meta.VITE_REACT_APP_APIKEY;
 
   // este useEffect hace el llamado a la api cuando el componente Peliculas.jsx se renderiza por primera vez
   useEffect(() => {
     async function getMovie() {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${movieId.id}?language=es-ES&api_key=a990bf3702ca2532fca8742542f6e792`
+          `https://api.themoviedb.org/3/movie/${movieId.id}?language=es-ES&api_key=${apiKey}`
         );
         const movie = await response.json();
         setMovie(movie);
